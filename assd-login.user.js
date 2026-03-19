@@ -5,6 +5,8 @@
 // @description  Auto-submits login after Bitwarden fills credentials; clicks post-login nav links
 // @match        https://*-*.assd.com/*
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/KaiserXanderW/assd-login/main/assd-login.user.js
+// @downloadURL  https://raw.githubusercontent.com/KaiserXanderW/assd-login/main/assd-login.user.js
 // ==/UserScript==
 
 (function () {
