@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         assd-login
 // @namespace    Violentmonkey Scripts
-// @version      1.0.0
+// @version      1.0.1
 // @description  Auto-submits login after Bitwarden fills credentials; clicks post-login nav links
 // @match        https://*-*.assd.com/*
 // @grant        none
