@@ -27,9 +27,9 @@
     const reservLink = document.querySelector(RESERV_LINK_SELECTOR);
 
     if (tagesLink && reservLink) {
-      console.log('[assd-login] Both post-login links ready; clicking...');
-      tagesLink.click();
-      setTimeout(() => reservLink.click(), 500);
+      console.log('[assd-login] Both post-login links ready; opening tabs...');
+      window.open(tagesLink.href, '_blank');
+      setTimeout(() => window.open(reservLink.href, '_blank'), 300);
       return;
     }
 
@@ -39,15 +39,10 @@
       const reservLink = document.querySelector(RESERV_LINK_SELECTOR);
 
       if (tagesLink && reservLink && !tagesLink.clicked) {
-        console.log('[assd-login] Post-login links detected; clicking...');
-        tagesLink.click();
+        console.log('[assd-login] Post-login links detected; opening tabs...');
         tagesLink.clicked = true;
-        setTimeout(() => {
-          if (reservLink && !reservLink.clicked) {
-            reservLink.click();
-            reservLink.clicked = true;
-          }
-        }, 500);
+        window.open(tagesLink.href, '_blank');
+        setTimeout(() => window.open(reservLink.href, '_blank'), 300);
         postLoginObserver.disconnect();
       }
     });
